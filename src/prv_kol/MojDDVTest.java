@@ -1,9 +1,6 @@
 package prv_kol;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 class AmountNotAllowedException extends Exception{
@@ -95,7 +92,7 @@ class Receipt{
 
     @Override
     public String toString() {
-        return String.format("%d %d %.3f", id, totalAmount(), taxReturns()); // id +" " + totalAmount()  + " "+ taxReturns();
+        return String.format("%10d\t%10d\t%10.5f", id, totalAmount(), taxReturns()); // id +" " + totalAmount()  + " "+ taxReturns();
     }
 }
 
@@ -129,6 +126,22 @@ class MojDDV{
         receipts.stream().forEach(i->out.println(i));
         printWriter.flush();
     }
+
+    public void printStatistics(PrintStream out) {
+        PrintWriter printWriter=new PrintWriter(out);
+
+        DoubleSummaryStatistics summaryStatistics=receipts.stream()
+                .mapToDouble(Receipt::taxReturns).summaryStatistics();
+
+        printWriter.println(String.format("min:\t%.3f\nmax:\t%.3f\nsum:\t%.3f\ncount:\t%d\navg:\t%.3f",
+                summaryStatistics.getMin(),
+                summaryStatistics.getMax(),
+                summaryStatistics.getSum(),
+                summaryStatistics.getCount(),
+                summaryStatistics.getAverage()));
+
+        printWriter.flush();
+    }
 }
 
 public class MojDDVTest {
@@ -142,6 +155,9 @@ public class MojDDVTest {
 
         System.out.println("===PRINTING TAX RETURNS RECORDS TO OUTPUT STREAM ===");
         mojDDV.printTaxReturns(System.out);
+
+        System.out.println("===PRINTING SUMMARY STATISTICS FOR TAX RETURNS TO OUTPUT STREAM===");
+        mojDDV.printStatistics(System.out);
 
     }
 }
