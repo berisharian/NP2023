@@ -2,6 +2,7 @@ package prv_kol;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -39,9 +40,10 @@ class ShapeFactory {
         String []parts=line.split("\\s+");
         String id=parts[0];
         List<Integer> s= new ArrayList<>();
-        for(int i=1;i<parts.length;i++){
-            s.add(Integer.parseInt(parts[i]));
-        }
+//        for(int i=1;i<parts.length;i++){
+//            s.add(Integer.parseInt(parts[i]));
+//        }
+        Arrays.stream(parts).skip(1).map(Integer::parseInt).collect(Collectors.toList());
         return new Shape(id, s);
     }
 }
