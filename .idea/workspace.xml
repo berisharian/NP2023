@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1835b6e-0ffe-48c9-83a6-aae7a4216d49" name="Changes" comment="Generic task with Logs">
-      <change afterPath="$PROJECT_DIR$/src/prv_kol/MinAndMax.java" afterDir="false" />
+    <list default="true" id="c1835b6e-0ffe-48c9-83a6-aae7a4216d49" name="Changes" comment="MinAndMax">
+      <change afterPath="$PROJECT_DIR$/src/prv_kol/ShapesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prv_kol/Shapes1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prv_kol/Shapes1Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,8 @@
       <updated>1716194500193</updated>
       <workItem from="1716194501733" duration="24242000" />
       <workItem from="1716371993355" duration="220000" />
-      <workItem from="1716372220887" duration="2129000" />
+      <workItem from="1716372220887" duration="2173000" />
+      <workItem from="1716466404911" duration="4095000" />
     </task>
     <task id="LOCAL-00001" summary="Version 1">
       <created>1716200977830</created>
@@ -105,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716372764235</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="MinAndMax">
+      <created>1716374387347</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716374387347</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +152,7 @@
     <MESSAGE value="F1Race" />
     <MESSAGE value="FileSystem" />
     <MESSAGE value="Generic task with Logs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generic task with Logs" />
+    <MESSAGE value="MinAndMax" />
+    <option name="LAST_COMMIT_MESSAGE" value="MinAndMax" />
   </component>
 </project>

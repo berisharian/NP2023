@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class Shape implements Comparable<Shape>{
+class Shape implements Comparable<Form>{
     private String canvas_id;
     private List<Integer> sizes;
 
@@ -25,7 +25,7 @@ class Shape implements Comparable<Shape>{
 
     @Override
 
-    public int compareTo(Shape o) {
+    public int compareTo(Form o) {
         return Integer.compare(this.perimeter(), o.perimeter());
     }
 
@@ -36,7 +36,7 @@ class Shape implements Comparable<Shape>{
 }
 class ShapeFactory {
     //364fbe94 24 30 22 33 32 30 37 18 29 27 33 21 27 26
-    public static Shape createShape(String line){
+    public static Form createShape(String line){
         String []parts=line.split("\\s+");
         String id=parts[0];
         List<Integer> s= new ArrayList<>();
@@ -44,12 +44,12 @@ class ShapeFactory {
 //            s.add(Integer.parseInt(parts[i]));
 //        }
         Arrays.stream(parts).skip(1).map(Integer::parseInt).collect(Collectors.toList());
-        return new Shape(id, s);
+        return new Form(id, s);
     }
 }
 
 class ShapesApplication{
-    List<Shape> shapes;
+    List<Form> shapes;
 
     public ShapesApplication() {
 
@@ -64,7 +64,7 @@ class ShapesApplication{
     }
     public void printLargestCanvasTo (OutputStream outputStream){
         PrintWriter printWriter=new PrintWriter(outputStream, true);
-        Shape s=shapes.stream().sorted(Comparator.reverseOrder()).findFirst().get();
+        Form s=shapes.stream().sorted(Comparator.reverseOrder()).findFirst().get();
         printWriter.println(s);
     }
 
