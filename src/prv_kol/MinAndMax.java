@@ -7,7 +7,16 @@ class MinMax<T extends Comparable<T>>{
     private T max;
     private int distinctCount;
 
+    int updates;
+    int countMax;
+    int countMin;
+
     public MinMax() {
+        min=null;
+        max=null;
+        updates=0;
+        countMax=0;
+        countMax=0;
     }
 
     public MinMax(T min, T max, int distinctCount) {
@@ -17,29 +26,22 @@ class MinMax<T extends Comparable<T>>{
     }
 
     public void update(T element) {
-        boolean isDistinct = false;
-
-        if (min == null || element.compareTo(min) < 0) {
-            if (min != null && !element.equals(min)) {
-                isDistinct = true;
-            }
-            min = element;
+        if(min == null || min.compareTo(element) > 0) {
+            min=element;
+            countMin=1;
+        }
+        else if(min.compareTo(element) == 0){
+            countMin++;
         }
 
-        if (max == null || element.compareTo(max) > 0) {
-            if (max != null && !element.equals(max)) {
-                isDistinct = true;
-            }
-            max = element;
+        if(max==null || max.compareTo(element) < 0 ){
+            max=element;
+            countMax=1;
         }
-
-        if (min != null && max != null && element.compareTo(min) > 0 && element.compareTo(max) < 0) {
-            isDistinct = true;
+        else if(max.compareTo(element)==0){
+            countMax++;
         }
-
-        if (isDistinct) {
-            distinctCount++;
-        }
+        updates++;
     }
 
     public T min(){
@@ -51,7 +53,7 @@ class MinMax<T extends Comparable<T>>{
 
     @Override
     public String toString() {
-        return String.format("%s %s %d\n", min, max, distinctCount-1);
+        return String.format("%s %s %d\n", min, max, updates- countMax - countMin);
     }
 }
 
