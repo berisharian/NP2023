@@ -1,7 +1,10 @@
 package prv_kol;
 
 
+import com.sun.jdi.DoubleValue;
+
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 class Triple<T extends Number>{
@@ -17,8 +20,11 @@ class Triple<T extends Number>{
 
     public double max() {
         List<T> list=new ArrayList<>(List.of(first, second, third));
-        list.sort((a, b) -> Double.compare(a.doubleValue(), b.doubleValue()));
-        return list.get(2).doubleValue();
+    //    list.sort((a, b) -> Double.compare(a.doubleValue(), b.doubleValue()));
+        //    return list.get(2).doubleValue();
+        return   list.stream().mapToDouble(Number::doubleValue).max().getAsDouble();
+
+
     }
 
     public double avarage() {
