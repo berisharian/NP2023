@@ -23,7 +23,7 @@ class EvaluatorBuilder{
 }
 class Evaluator {
     static  <T extends Comparable<T>> boolean evaluateExpression (T left, T right, String operator){
-        IEvaluator<T> evaluator = EvaluatorBuilder.build(operator);
+        IEvaluator<T> evaluator = prv_kol.ApplicantEvaluation.EvaluatorBuilder.build(operator);
         return evaluator.evaluate(left, right);
     }
 }
@@ -71,21 +71,21 @@ public class EvaluatorTest {
             if (parts[0].equals("1")) { //Integers
                 Integer left = Integer.valueOf(parts[1]);
                 Integer right = Integer.valueOf(parts[3]);
-                System.out.println(Evaluator.evaluateExpression(left,right,operator));
+                System.out.println(prv_kol.ApplicantEvaluation.Evaluator.evaluateExpression(left,right,operator));
 
             }
             else if (parts[0].equals("2")) { //Double
                 Double left = Double.valueOf(parts[1]);
                 Double right = Double.valueOf(parts[3]);
-                System.out.println(Evaluator.evaluateExpression(left,right,operator));
+                System.out.println(prv_kol.ApplicantEvaluation.Evaluator.evaluateExpression(left,right,operator));
             }
             else if (parts[0].equals("3")) { //Characters
                 Character left = parts[1].charAt(0);
                 Character right = parts[3].charAt(0);
-                System.out.println(Evaluator.evaluateExpression(left,right,operator));
+                System.out.println(prv_kol.ApplicantEvaluation.Evaluator.evaluateExpression(left,right,operator));
             }
             else if (parts[0].equals("4")) { //String
-                System.out.println(Evaluator.evaluateExpression(parts[1],parts[3],operator));
+                System.out.println(prv_kol.ApplicantEvaluation.Evaluator.evaluateExpression(parts[1],parts[3],operator));
             }
             else { // Students
                 operator = parts[3];
@@ -93,7 +93,7 @@ public class EvaluatorTest {
                 String sInfo2 = Arrays.stream(parts).skip(4).limit(3).collect(Collectors.joining(" "));
                 Student s1 = Student.createInstance(sInfo1);
                 Student s2 = Student.createInstance(sInfo2);
-                System.out.println(Evaluator.evaluateExpression(s1,s2,operator));
+                System.out.println(prv_kol.ApplicantEvaluation.Evaluator.evaluateExpression(s1,s2,operator));
             }
         }
 

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1835b6e-0ffe-48c9-83a6-aae7a4216d49" name="Changes" comment="TripleTest Updated">
-      <change afterPath="$PROJECT_DIR$/src/prv_kol/EvaluatorTest.java" afterDir="false" />
+    <list default="true" id="c1835b6e-0ffe-48c9-83a6-aae7a4216d49" name="Changes" comment="EvaluatorBuilder">
+      <change afterPath="$PROJECT_DIR$/src/prv_kol/ApplicantEvaluation/ApplicantEvaluationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prv_kol/GenericFractionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prv_kol/EvaluatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prv_kol/EvaluatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +51,7 @@
       <workItem from="1716371993355" duration="220000" />
       <workItem from="1716372220887" duration="2173000" />
       <workItem from="1716466404911" duration="23139000" />
-      <workItem from="1716636869120" duration="633000" />
+      <workItem from="1716636869120" duration="4749000" />
     </task>
     <task id="LOCAL-00001" summary="Version 1">
       <created>1716200977830</created>
@@ -149,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716571290025</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="EvaluatorBuilder">
+      <created>1716637604302</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1716637604302</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +202,7 @@
     <MESSAGE value="ArchiveStore" />
     <MESSAGE value="TripleTest" />
     <MESSAGE value="TripleTest Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="TripleTest Updated" />
+    <MESSAGE value="EvaluatorBuilder" />
+    <option name="LAST_COMMIT_MESSAGE" value="EvaluatorBuilder" />
   </component>
 </project>
