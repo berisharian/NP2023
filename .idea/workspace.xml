@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1835b6e-0ffe-48c9-83a6-aae7a4216d49" name="Changes" comment="FrontPage">
+    <list default="true" id="c1835b6e-0ffe-48c9-83a6-aae7a4216d49" name="Changes" comment="CoinFlipped">
       <change afterPath="$PROJECT_DIR$/src/prv_kol/GenericFractionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prv_kol/LoadedCoinTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prv_kol/SubtitlesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +51,7 @@
       <workItem from="1716372220887" duration="2173000" />
       <workItem from="1716466404911" duration="23139000" />
       <workItem from="1716636869120" duration="16716000" />
-      <workItem from="1716731799500" duration="3977000" />
+      <workItem from="1716731799500" duration="6681000" />
     </task>
     <task id="LOCAL-00001" summary="Version 1">
       <created>1716200977830</created>
@@ -186,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716741366191</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="CoinFlipped">
+      <created>1716742164445</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1716742164445</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +241,7 @@
     <MESSAGE value="Component + Window" />
     <MESSAGE value="WeatherStation" />
     <MESSAGE value="FrontPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="FrontPage" />
+    <MESSAGE value="CoinFlipped" />
+    <option name="LAST_COMMIT_MESSAGE" value="CoinFlipped" />
   </component>
 </project>
