@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1835b6e-0ffe-48c9-83a6-aae7a4216d49" name="Changes" comment="QuizQuestion">
+    <list default="true" id="c1835b6e-0ffe-48c9-83a6-aae7a4216d49" name="Changes" comment="RiskTester 1">
       <change afterPath="$PROJECT_DIR$/src/prv_kol/GenericFractionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prv_kol/RiskTester/RiskTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prv_kol/RiskTester2/RiskTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +52,7 @@
       <workItem from="1716466404911" duration="23139000" />
       <workItem from="1716636869120" duration="16716000" />
       <workItem from="1716731799500" duration="11852000" />
-      <workItem from="1716796494165" duration="4411000" />
+      <workItem from="1716796494165" duration="5917000" />
     </task>
     <task id="LOCAL-00001" summary="Version 1">
       <created>1716200977830</created>
@@ -222,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716801211797</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="RiskTester 1">
+      <created>1716802688666</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1716802688666</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +283,7 @@
     <MESSAGE value="RuleProcessor" />
     <MESSAGE value="Quiz" />
     <MESSAGE value="QuizQuestion" />
-    <option name="LAST_COMMIT_MESSAGE" value="QuizQuestion" />
+    <MESSAGE value="RiskTester 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="RiskTester 1" />
   </component>
 </project>
