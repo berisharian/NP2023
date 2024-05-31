@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1835b6e-0ffe-48c9-83a6-aae7a4216d49" name="Changes" comment="ShoppingCart">
-      <change afterPath="$PROJECT_DIR$/src/prv_kol/EquationTester.java" afterDir="false" />
+    <list default="true" id="c1835b6e-0ffe-48c9-83a6-aae7a4216d49" name="Changes" comment="EquationProcessor">
       <change afterPath="$PROJECT_DIR$/src/prv_kol/GenericFractionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vtor_kol/BooksTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +52,8 @@
       <workItem from="1716466404911" duration="23139000" />
       <workItem from="1716636869120" duration="16716000" />
       <workItem from="1716731799500" duration="11852000" />
-      <workItem from="1716796494165" duration="17785000" />
+      <workItem from="1716796494165" duration="18603000" />
+      <workItem from="1717184941197" duration="915000" />
     </task>
     <task id="LOCAL-00001" summary="Version 1">
       <created>1716200977830</created>
@@ -243,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716836156812</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="EquationProcessor">
+      <created>1716843291204</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1716843291204</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +281,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Shapes App" />
     <MESSAGE value="Shapes App Updated" />
     <MESSAGE value="Shapes App 2 Updated" />
     <MESSAGE value="F1Race" />
@@ -298,6 +305,7 @@
     <MESSAGE value="RiskTester 1" />
     <MESSAGE value="RiskTester 2" />
     <MESSAGE value="ShoppingCart" />
-    <option name="LAST_COMMIT_MESSAGE" value="ShoppingCart" />
+    <MESSAGE value="EquationProcessor" />
+    <option name="LAST_COMMIT_MESSAGE" value="EquationProcessor" />
   </component>
 </project>
