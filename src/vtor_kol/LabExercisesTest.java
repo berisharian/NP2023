@@ -57,9 +57,9 @@ class LabExercises{
             asc= asc.reversed();
         }
         students.stream()
-                    .sorted(asc)
-                    .limit(n)
-                    .forEach(System.out::println);
+                .sorted(asc)
+                .limit(n)
+                .forEach(System.out::println);
     }
 
     public List<Student> failedStudents() {
@@ -73,12 +73,12 @@ class LabExercises{
     }
 
     public Map<Integer, Double> getStatisticsByYear() {
-            return students.stream()
-                    .filter(Student::hasSignature)
-                    .collect(Collectors.groupingBy(
-                            Student::getYearOfStudies,
-                            Collectors.averagingDouble(Student::getAverage)
-                    ));
+        return students.stream()
+                .filter(Student::hasSignature)
+                .collect(Collectors.groupingBy(
+                        Student::getYearOfStudies,
+                        Collectors.averagingDouble(Student::getAverage)
+                ));
 
     }
 }
