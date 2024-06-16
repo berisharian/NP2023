@@ -1,86 +1,120 @@
 package vtor_kol;
 
 import java.util.*;
-import java.util.stream.IntStream;
+import java.util.stream.*;
+
 
 class SeatTakenException extends Exception{
-    public SeatTakenException() {
-    }
 }
+
 class SeatNotAllowedException extends Exception{
-    public SeatNotAllowedException() {
-    }
 }
 
-class Sector{
+
+class Sector implements Comparable<Sector>{
     String code;
-    int places;
-    Map<Integer, Integer> map;
+    int capacity;
 
-    public Sector(String code, int places) {
+    Map<Integer,Integer> typesBySeats;
+    Set<Integer> types;
+
+
+    public Sector(String code, int capacity) {
         this.code = code;
-        this.places = places;
-        this.map=new HashMap<>();
+        this.capacity = capacity;
+
+        typesBySeats=new HashMap<>();
+        types=new HashSet<>();
     }
 
-    public boolean isSeatTaken(int seat){
-        return map.containsKey(seat);
+    public boolean isTaken(int seat) {
+        return typesBySeats.containsKey(seat);
     }
-    public boolean containsValue(int value){
-        return map.containsValue(value);
+
+
+    public int getRemainingSpace(){
+        return capacity - typesBySeats.size();
     }
-    public void buyTicket(int seat, int type){
-        map.put(seat, type);
+
+    public void takeSeat(int seat, int type) throws SeatNotAllowedException {
+        if(type == 1){
+            if(types.contains(2)){
+                throw new SeatNotAllowedException();
+            }
+        }else  if(type == 2) {
+            if (types.contains(1)) {
+                throw new SeatNotAllowedException();
+            }
+        }
+
+        typesBySeats.put(seat,type);
+        types.add(type);
     }
-    public int availableSeats(){
-        return places - map.size();
+
+
+    @Override
+    public String toString() {
+        double percentage=  (capacity - getRemainingSpace()) * 100.0 / capacity;
+        return String.format("%s\t%d/%d\t%.1f%%",code,getRemainingSpace(),capacity,percentage);
     }
 
     public String getCode() {
         return code;
     }
 
-    private double getPercent() {
-        return map.size() / (double)places * 100.0;
-    }
-
     @Override
-    public String toString() {
-        return String.format("%s\t%d/%d\t%.1f%%", code, availableSeats(), places, getPercent());
+    public int compareTo(Sector other) {
+        return Comparator.comparing(Sector::getRemainingSpace).reversed()
+                .thenComparing(Sector::getCode)
+                .compare(this,other);
     }
 }
 
-
 class Stadium{
+
     String name;
-    Map<String, Sector> sectors;
+    List<Sector> sectors;
+
+    Map<String,Sector> sectorsByName;
+
 
     public Stadium(String name) {
         this.name = name;
-        this.sectors= new HashMap<>();
+        sectors=new ArrayList<>();
+        sectorsByName=new HashMap<>();
     }
 
     public void createSectors(String[] sectorNames, int[] sectorSizes) {
-        IntStream.range(0, sectorNames.length)
-                .forEach(x-> sectors.put(sectorNames[x], new Sector(sectorNames[x], sectorSizes[x])));
+        for (int i = 0; i < sectorNames.length; i++) {
+            String name = sectorNames[i];
+            int size = sectorSizes[i];
+            Sector sector = new Sector(name, size);
+            sectorsByName.put(name,sector);
+            sectors.add(sector);
+        }
+        //   System.out.println(sectors);
     }
 
-    public void buyTicket(String sectorName, int seat, int type) throws SeatTakenException, SeatNotAllowedException {
-        if(sectors.get(sectorName).isSeatTaken(seat)){
+    void buyTicket(String sectorName, int seat, int type) throws SeatTakenException, SeatNotAllowedException {
+        Sector sector = sectorsByName.get(sectorName);
+        if (sector.isTaken(seat)){
             throw new SeatTakenException();
         }
-        if(type !=0 && sectors.get(sectorName).containsValue(((type -1 )^1) +1 )){
-            throw new SeatNotAllowedException();
+        else{
+            sector.takeSeat(seat, type);
         }
-        sectors.get(sectorName).buyTicket(seat, type);
     }
 
-    public void showSectors() {
-        sectors.values().stream()
-                .sorted(Comparator.comparing(Sector::availableSeats).reversed().thenComparing(Sector::getCode))
+    void showSectors(){
+
+        sectorsByName.values()
+                .stream()
+                .sorted()
                 .forEach(System.out::println);
     }
 }
+
+
 
 public class StaduimTest {
     public static void main(String[] args) {
@@ -115,4 +149,3 @@ public class StaduimTest {
         stadium.showSectors();
     }
 }
-
